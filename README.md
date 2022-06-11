@@ -39,7 +39,8 @@ Code:
     "message": "string", //Mensagem com o motivo - (Somente numeros no CPF | CPF Inválido | CPF Em uso | Email Em uso | Email inválido)
   }
  ```
-
+----
+----
  #### Retorna a lista com todos os usuarios
 
 ```http
@@ -70,7 +71,8 @@ Code:
     "message": "string", //Mensagem com o motivo (Nenhum usuario encontrado)
   }
  ```
-
+----
+----
   #### Retorna um usuario pelo ID
 
 ```http
@@ -104,11 +106,13 @@ Code:
   }
  ```
 
+---
    #### Editar um usuario pelo ID
 
 ```http
   PUT /api/User/Edit
-```
+----
+----
 | Parâmetro   | Tipo       | Descrição
 | :---------- | :--------- | :---------
 |  `id` | `int` | `Id do usuario`
@@ -137,8 +141,9 @@ Code:
     "message": "string", //Mensagem com o motivo (Usuario não encontrado)
   }
  ```
-
-    #### Editar um usuario pelo ID
+----
+----
+  #### Editar um usuario pelo ID
 
 ```http
   PUT /api/User/Delete
