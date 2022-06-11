@@ -103,3 +103,61 @@ Code:
     "message": "string", //Mensagem com o motivo (Usuario não encontrado)
   }
  ```
+
+   #### Editar um usuario pelo ID
+
+```http
+  PUT /api/User/Edit
+```
+| Parâmetro   | Tipo       | Descrição
+| :---------- | :--------- | :---------
+|  `id` | `int` | `Id do usuario`
+| `{"nome": string, "email" : string, "senha": string, "cpf": string, datanasc: string }`| `json`| `Não são todos obrigatorios, somente os dados que serão alterados`
+
+ ```json
+Retorno:
+Code:
+  200: 
+  {
+    "statusCode": 200, //Sucesso
+    "message": null, //Null string
+    "result":
+        {
+          "id": 0,
+          "nome": "string",
+          "email": "string",
+          "senha": "string",
+          "cpf": "string",
+          "datanasc": "string",
+        }
+  }
+  404: // Usuario não encontrado
+  {
+    "statusCode": 404, // Usuario não encontrado
+    "message": "string", //Mensagem com o motivo (Usuario não encontrado)
+  }
+ ```
+
+    #### Editar um usuario pelo ID
+
+```http
+  PUT /api/User/Delete
+```
+| Parâmetro   | Tipo       | Descrição
+| :---------- | :--------- | :---------
+|  `id` | `int` | `Id do usuario`
+
+ ```json
+Retorno:
+Code:
+  200: 
+  {
+    "statusCode": 200, //Sucesso
+    "message": "string", //Mensagem de sucesso (Usuario Deletado)
+  }
+  404: // Usuario não encontrado
+  {
+    "statusCode": 404, // Usuario não encontrado
+    "message": "string", //Mensagem com o motivo (Usuario não encontrado)
+  }
+ ```

@@ -107,7 +107,7 @@ namespace API_Desafio.Controllers
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(ApiResponseOk<User>))]
         [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(ApiResponse))]
         [ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(ApiResponse))]
-        public async Task<ActionResult> Edit(int id, UserModelDto userData)
+        public async Task<ActionResult> Edit(int id, UserModelEdit userData)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
@@ -122,11 +122,15 @@ namespace API_Desafio.Controllers
             if (UserRepository.VerifyData(user, userData, out string msgError))
                 return BadRequest(new ApiResponse(405, msgError));
 
-            user.Nome = userData.Nome;
+            if (user.Nome != userData.Nome && userData.Nome != null)
+                user.Nome = userData.Nome;
+            else if (user.DataNasc != userData.DataNasc && userData.DataNasc != null)
+                user.DataNasc = userData.DataNasc;
+            else if (user.Senha != null)
+                user.Senha = Encrypt.SHA256(userData.Senha);
+
             user.Email = userData.Email;
             user.Cpf = userData.Cpf;
-            user.DataNasc = userData.DataNasc;
-            user.Senha = Encrypt.SHA256(userData.Senha);
 
             await UserRepository.Update(user);
 
