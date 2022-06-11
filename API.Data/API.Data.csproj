@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\API.Common\API.Common.csproj" />
     <ProjectReference Include="..\API.Entities\API.Entities.csproj" />
   </ItemGroup>
 

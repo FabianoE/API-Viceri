@@ -35,6 +35,7 @@ namespace API_Desafio
         {
             services.AddDbContext<DataContext>(opt => opt.UseInMemoryDatabase(databaseName: "Test"));
             services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IVerifyData, VerifyRepository>();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>

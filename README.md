@@ -112,7 +112,7 @@ Code:
 | Parâmetro   | Tipo       | Descrição
 | :---------- | :--------- | :---------
 |  `id` | `int` | `Id do usuario`
-| `{"nome": string, "email" : string, "senha": string, "cpf": string, datanasc: string }`| `json`| `Não são todos obrigatorios, somente os dados que serão alterados`
+| `{"nome": string, "email" : string, "senha": string, "cpf": string, datanasc: string }`| `json`| `Todos os dados são obrigatorios`
 
  ```json
 Retorno:
