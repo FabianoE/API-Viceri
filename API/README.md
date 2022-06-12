@@ -36,7 +36,6 @@ Codes:
   }
  ```
 ----
-----
  #### Retorna a lista com todos os usuarios
 
 ```http
@@ -68,7 +67,6 @@ Codes:
     "message": "string", //Mensagem com o motivo (Nenhum usuario encontrado)
   }
  ```
-----
 ----
   #### Retorna um usuario pelo ID
 
@@ -104,12 +102,11 @@ Codes:
   }
  ```
 ---
-   #### Editar um usuario pelo ID
+   #### Edita um usuario pelo ID
 
 ```http
   PUT /api/User/Edit
 ```
-----
 | Parâmetro   | Tipo       | Descrição
 | :---------- | :--------- | :---------
 |  `id` | `int` | `Id do usuario`
@@ -140,8 +137,7 @@ Codes:
   }
  ```
 ----
-----
-  #### Editar um usuario pelo ID
+  #### Deleta um usuario pelo ID
 
 ```http
   PUT /api/User/Delete
