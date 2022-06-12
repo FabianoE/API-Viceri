@@ -16,8 +16,8 @@ namespace API_Viceri.Controllers
     [Route("api/[controller]")]
     public class UserController : ControllerBase
     {
-        IUserRepository UserRepository { get; set; }
-        IVerifyData VerifyData { get; set; }
+        private IUserRepository UserRepository { get; set; }
+        private IVerifyData VerifyData { get; set; }
         public UserController(IUserRepository user, IVerifyData verifyData)
         {
             UserRepository = user;
