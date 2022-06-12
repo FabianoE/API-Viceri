@@ -2,7 +2,7 @@
 using API.Common.Utils;
 using API.Data.Interfaces;
 using API.Entities.User;
-using API_Desafio.Models;
+using API_Viceri.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -10,7 +10,7 @@ using Swashbuckle.AspNetCore.Annotations;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace API_Desafio.Controllers
+namespace API_Viceri.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]

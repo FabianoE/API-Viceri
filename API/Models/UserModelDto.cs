@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
 
-namespace API_Desafio.Models
+namespace API_Viceri.Models
 {
     public class UserModelDto : IBaseUser
     {

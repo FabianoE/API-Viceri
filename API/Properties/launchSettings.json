@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "API_Desafio": {
+    "API_Viceri": {
       "commandName": "Project",
       "dotnetRunMessages": "true",
       "launchBrowser": true,
