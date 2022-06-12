@@ -1,9 +1,4 @@
 
-# AspNet API - Teste Técnico - Viceri
-
-
-
-
 ## Documentação da API
 
 #### Cadastra um novo usuario
@@ -18,7 +13,7 @@
 
 ```json
 Retornos:
-Code:
+Codes:
   200: 
   {
     "statusCode": 200, //Usuario cadastrado
@@ -33,12 +28,14 @@ Code:
         "datanasc": "string",
       }
   }
+
   400: // Erro ao cadastrar
   {
     "statusCode": 405, //Cadastro não foi permitido
     "message": "string", //Mensagem com o motivo - (Somente numeros no CPF | CPF Inválido | CPF Em uso | Email Em uso | Email inválido)
   }
  ```
+----
 ----
  #### Retorna a lista com todos os usuarios
 
@@ -47,7 +44,7 @@ Code:
 ```
  ```json
 Retornos:
-Code:
+Codes:
   200: 
   {
     "statusCode": 200, //Sucesso
@@ -64,12 +61,14 @@ Code:
         },
     ] 
   }
+
   404: // Nenhum usuario encontrado
   {
     "statusCode": 404, // Nenhum usuario encontrado
     "message": "string", //Mensagem com o motivo (Nenhum usuario encontrado)
   }
  ```
+----
 ----
   #### Retorna um usuario pelo ID
 
@@ -82,7 +81,7 @@ Code:
 
  ```json
 Retorno:
-Code:
+Codes:
   200: 
   {
     "statusCode": 200, //Sucesso
@@ -97,18 +96,19 @@ Code:
           "datanasc": "string",
         }
   }
+
   404: // Usuario não encontrado
   {
     "statusCode": 404, // Usuario não encontrado
     "message": "string", //Mensagem com o motivo (Usuario não encontrado)
   }
  ```
-
 ---
    #### Editar um usuario pelo ID
 
 ```http
   PUT /api/User/Edit
+```
 ----
 | Parâmetro   | Tipo       | Descrição
 | :---------- | :--------- | :---------
@@ -117,7 +117,7 @@ Code:
 
  ```json
 Retorno:
-Code:
+Codes:
   200: 
   {
     "statusCode": 200, //Sucesso
@@ -132,12 +132,14 @@ Code:
           "datanasc": "string",
         }
   }
+
   404: // Usuario não encontrado
   {
     "statusCode": 404, // Usuario não encontrado
     "message": "string", //Mensagem com o motivo (Usuario não encontrado)
   }
  ```
+----
 ----
   #### Editar um usuario pelo ID
 
@@ -150,12 +152,13 @@ Code:
 
  ```json
 Retorno:
-Code:
+Codes:
   200: 
   {
     "statusCode": 200, //Sucesso
     "message": "string", //Mensagem de sucesso (Usuario Deletado)
   }
+
   404: // Usuario não encontrado
   {
     "statusCode": 404, // Usuario não encontrado

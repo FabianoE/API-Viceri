@@ -132,7 +132,7 @@ namespace API_Desafio.Controllers
         }
 
         /// <summary>
-        /// Delete um usuario
+        /// Deleta um usuario
         /// </summary>
         /// <returns>Retorna os dados do usuario editado</returns>
         /// <response code="200">Usuario deletado</response>
